@@ -1,0 +1,49 @@
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'pink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+	<!--Main Container-->
+	<div class="main-container">
+		<!--Aside-->
+		<div class="aside">
+			<div class="atas">
+				<!--Nav Toggle Button-->
+				<div class="nav-toggler" id="coba" onclick="myFunc()">
+					<span></span>
+				</div>
+				<!--Nav Toggle Button End-->
+
+				<!--Logo-->
+				<div class="logo">
+					<a href="#">VPUTRIA</a>
+				</div>
+				<!--Logo End-->
+			</div>
+			
+			<!--Nav-->
+			<ul class="nav">
+				<li><a onclick="myFunc()" href="{% url 'project_index' %}"><i class="fa fa-home"></i>Home</a></li>
+				<li><a onclick="myFunc()" href="#about"><i class="fa fa-user"></i>About</a></li>
+				<li><a onclick="myFunc()" href="#education"><i class="fa fa-list"></i>Education</a></li>
+				<li><a onclick="myFunc()" href="#portfolio"><i class="fa fa-briefcase"></i>Project</a></li>
+				<li><a onclick="myFunc()" href=""><i class="fa fa-blog"></i>Blog</a></li>
+			</ul>
+			<!--Nav End-->
+
+			<!--Copyrigh-->
+			<div class="copyrigh-text">
+				Vika Putri Ariyanti &copy 2021
+			</div>
+			<!--Copyrigh End-->
+		</div>
+		<!--Aside End-->
+
+		<!--main content-->
+		<div class="main-content">
+            {% block page_content %}{% endblock %}
+		</div>
+		<!--main content end-->
+	</div>
+	<!--Main Container End-->
+
+<script src="{% static 'scripts.js' %}"></script>

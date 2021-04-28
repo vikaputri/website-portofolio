@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block page_content %}
+        <!--Home Section-->
+			<section class="home section" id="home">
+				<div class="container">
+					<div class="intro">
+						<img class="shadow-dark" src="{% static 'img/profil1.png'%}"alt="profile">
+						<h1>Vika Putri Ariyanti</h1>
+						<p>Informatics Engineering Students</p>
+						<div class="social-link">
+							<a href="https://twitter.com/vikaputria/">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a href="https://facebook.com/vikaputriariyanti/">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="https://www.linkedin.com/in/vikaputriariyanti/">
+								<i class="fab fa-linkedin center"></i>
+							</a>
+							<a href="https://github.com/Vputri"><i class="fab fa-github"></i></a>
+							<a href="https://www.kaggle.com/vikaputri">
+								<i class="fab fa-kaggle"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--Home Section End-->
+
+			<!--About Section-->
+			<section class="about section" id="about">
+				<div class="container">
+					<div class="row">
+						<div class="section-title padd-15">
+							<h2>About Me</h2>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="about-content padd-15 add">
+							<div class="row">
+								<div class="about-text add">
+									<h3>Vika Putri Ariyanti</h3>
+									<p>Hi, my name is Vika Putri Ariyanti. I am a final year Informatics Engineering Students at Gunadarma University. I am interested in Machine Learning and Web Programming.</p>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="personal-info padd-15 add">
+									<h3 class="title">Personal Info</h3>
+
+									<div class="row">
+										<div class="info-item add">
+											<p>Gender : <span>Female</span></p>
+										</div>
+										<div class="info-item add">
+											<p>Marital Status : <span>Single</span></p>
+										</div>
+										<div class="info-item add">
+											<p>Address : <span>South Jakarta</span></p>
+										</div>
+										<div class="info-item add">
+											<p>Nasionality : <span>Indonesia</span></p>
+										</div>
+										<div class="info-item add">
+											<p>Email : <span>vikaputriariyanti@gmail.com</span></p>
+										</div>
+										<div class="info-item add">
+											<p>Telepon : <span>-</span></p>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="button add">
+											<a href="{% static 'file/CV_VIKA PUTRI ARIYANTI.pdf'%}" class="btn">Download CV</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill padd-15">
+									<div class="row add margin">
+										<h3 class="title">Skill</h3>
+										<div class="skill-item">
+											<h5>HTML</h5>
+											<h5>CSS</h5>
+											<h5>Python</h5>
+											<h5>Java</h5>
+											<h5>Git</h5>
+											<h5>SQL</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--About Section End-->
+
+			<!--Education Section-->
+			<section class="about section" id="education">
+				<div class="container">
+					<div class="row">
+						<div class="section-title padd-15">
+							<h2>Education</h2>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="about-content padd-15 add">
+							<div class="row">
+								<div class="education padd-15 add">
+									<h3 class="title">Education</h3>
+									<div class="row add">
+										<div class="timeline-box">
+											<div class="timeline shadow-dark">
+												<div class="timeline-item">
+													<div class="circle-dot"></div>
+													<h6 class="timeline-date">
+														<i class="fa">&#xf073; 2017-Present</i>
+													</h6>
+													<h4 class="timeline-title">Bachelor Degree</h4>
+													<p class="timeline-text">Bachelor of Informatics Engineering at Gunadarma University</p>
+												</div>
+
+												<div class="timeline-item">
+													<div class="circle-dot"></div>
+													<h6 class="timeline-date">
+														<i class="fa">&#xf073; 2014-2017</i>
+													</h6>
+													<h4 class="timeline-title">Senior High School</h4>
+													<p class="timeline-text">Senior High School Science Major at SMA 1 Kajen</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="experience padd-15 add">
+									<h3 class="title">Experience</h3>
+									<div class="row add">
+										<div class="timeline-box">
+											<div class="timeline shadow-dark">
+												<div class="timeline-item">
+													<div class="circle-dot"></div>
+													<h6 class="timeline-date">
+														<i class="fa">&#xf073; 2019-Present</i>
+													</h6>
+													<h4 class="timeline-title">IT Laboratory Assistant</h4>
+													<p class="timeline-text">Has been a practicum tutor for VB 6.0, Delphi, Python, C / C ++, and UML at the IT Laboratory of Gunadarma University</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--Education Section End-->
+
+			<!--Portofolio Section-->
+			<section class="portfolio section" id="portfolio">
+				<div class="container">
+					<div class="row">
+						<div class="section-title padd-15">
+							<h2>Project</h2>
+						</div>
+					</div>
+
+					<div class="row">
+                        {% for project in projects %}
+						<div class="item padd-15">
+							<div class="item-inner shadow-dark">
+								<div class="item-img">
+									<img src="{% static project.image %}">
+								</div>
+								<div class="item-info">
+									<h4 class="judul">{{ project.title }}</h4>
+									<p class="deskripsi">{{ project.description }}</p>
+                                    <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">Read More</a>
+								</div>
+							</div>
+						</div>
+                        {% endfor %}
+					</div>
+				</div>
+			</section>
+			<!--Portofolio Section End-->
+
+{% endblock %}
