@@ -296,6 +296,7 @@ body{
 
 
 .home .intro .social-link a{
+	padding-top: 10px;
 	height: 35px;
 	width: 35px;
 	display: inline-block;
@@ -548,6 +549,14 @@ body{
 
 .slide-menu-tampil{
 	left:270px;
+}
+
+.form-control{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
 
 /*Responsive*/

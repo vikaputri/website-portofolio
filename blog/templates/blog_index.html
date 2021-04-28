@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="section-title padd-15">
+                {% for post in posts %}
+                <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+            </div>
+        </div>
+
+        <div>
+            {{ post.created_on.date }} |&nbsp;Categories:&nbsp;
+            {% for category in post.categories.all %}
+            <a href="{% url 'blog_category' category.name %}">
+                {{ category.name }}
+            </a>&nbsp;
+            {% endfor %}
+            <p>{{ post.body | slice:":400" }}...</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
